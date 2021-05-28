@@ -59,24 +59,31 @@ export default {
     },
     items: [
       { 
-        title: 'Edit',
+        title: 'Edycja',
         icon: 'mdi-pencil',
         click() {
           this.dialogs.edit = true
         }
       },
       {
-        title: 'Due date',
+        title: 'Termin',
         icon: 'mdi-calendar',
         click() {
           this.dialogs.dueDate = true
         }
       },
       {
-        title: 'Delete',
+        title: 'Usuń',
         icon: 'mdi-delete',
         click() {
           this.dialogs.delete = true
+        }
+      },
+      {
+        title: 'Pozycja',
+        icon: 'mdi-drag-horizontal-variant',
+        click() {
+          this.$store.commit('toggleSorting')
         }
       }
     ],
