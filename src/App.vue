@@ -7,7 +7,7 @@
     >
       <v-img
         class="pa-4 pt-7"
-        src="mountains.jpg"
+        src="GT2.jpg"
         height="170"
         gradient="to top right, rgba(19,84,122,.5), rgba(128,208,199,.5)"
       >
@@ -18,10 +18,10 @@
           >
         </v-avatar>
         <div class="white--text text-subtitle-1 font-weight-bold">
-          Użytkownik
+          Kontakt:
         </div>
         <div class="white--text text-subtitle-2">
-          Elo
+          ja_cek@gmx.com
         </div>
       </v-img>
 
