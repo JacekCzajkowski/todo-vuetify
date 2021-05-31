@@ -3,6 +3,7 @@ import Vuex from 'vuex'
 import Localbase from 'localbase'
 
 let db = new Localbase('db')
+db.config.debug = false
 
 Vue.use(Vuex)
 
@@ -89,21 +90,50 @@ export default new Vuex.Store({
         done: false,
         dueDate: null
       }
-      commit('addTask', newTask)
-      commit('showSnackbar', 'Task added!')
+      db.collection('tasks').add(newTask).then(() => {
+        commit('addTask', newTask)
+        commit('showSnackbar', 'Zadanie dodane!')
+      })
+    },
+    doneTask({ state, commit }, id) {
+      let task = state.tasks.filter(task => task.id === id)[0]
+      db.collection('tasks').doc({ id: id }).update({
+        done: !task.done
+      }).then(() => {
+        commit('doneTask', id)
+      })
     },
     deleteTask({ commit }, id) {
-      commit('deleteTask', id)
-      commit('showSnackbar', 'Task deleted!')
+      db.collection('tasks').doc({id: id}).delete().then(() => {
+        commit('deleteTask', id)
+        commit('showSnackbar', 'Zadanie usunięte!')
+      })
     },
     updateTaskTitle({ commit }, payload) {
-      commit('updateTaskTitle', payload)
-      commit('showSnackbar', 'Task updated!')
+      db.collection('tasks').doc({ id: payload.id }).update({
+        title: payload.title
+      }).then(() => {
+        commit('updateTaskTitle', payload)
+        commit('showSnackbar', 'Zadanie zaktualizowane!')
+      })
     },
     updateTaskDueDate({ commit }, payload) {
-      commit('updateTaskDueDate', payload)
-      commit('showSnackbar', 'Due Date updated!')
+      db.collection('tasks').doc({ id: payload.id }).update({
+        dueDate: payload.dueDate
+      }).then(() => {
+        commit('updateTaskDueDate', payload)
+        commit('showSnackbar', 'Data zaktualizowana!')
+      })
     },
+    setTasks({ commit}, tasks) {
+      db.collection('tasks').set(tasks)
+        commit('setTasks', tasks)
+    },
+    getTasks({ commit }) {
+      db.collection('tasks').get().then(tasks =>{
+        commit('setTasks', tasks)
+      })
+    }
   },
   getters: {
     tasksFiltered(state) {
