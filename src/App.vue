@@ -9,7 +9,7 @@
         class="pa-4 pt-7"
         src="mountains.jpg"
         height="170"
-        gradient="to top right, rgba(19,84,122,.5), rgba(128,208,199,.8)"
+        gradient="to top right, rgba(19,84,122,.5), rgba(128,208,199,.5)"
       >
         <v-avatar size="70" class="mb-2">
           <img
@@ -18,10 +18,10 @@
           >
         </v-avatar>
         <div class="white--text text-subtitle-1 font-weight-bold">
-          Elo
+          Użytkownik
         </div>
         <div class="white--text text-subtitle-2">
-          Menelo
+          Elo
         </div>
       </v-img>
 
@@ -50,14 +50,14 @@
       app
       color="primary"
       dark
-      src="mountains.jpg"
+      src="GT2.jpg"
       prominent
       :height="$route.path === '/' ? '238' : '170'"
     >
       <template v-slot:img="{ props }">
         <v-img
           v-bind="props"
-          gradient="to top right, rgba(19,84,122,.9), rgba(128,208,199,.9)"
+          gradient="to top right, rgba(19,84,122,.5), rgba(128,208,199,.5)"
         ></v-img>
       </template>
 
@@ -92,8 +92,8 @@
     data: () => ({
       drawer: null,
       items: [
-        { title: 'Todo', icon: 'mdi-format-list-checks', to: '/' },
-        { title: 'About', icon: 'mdi-help-box', to: '/about' },
+        { title: 'Zadania', icon: 'mdi-format-list-checks', to: '/' },
+        { title: 'Info', icon: 'mdi-help-box', to: '/about' },
       ],
     }),
     mounted() {

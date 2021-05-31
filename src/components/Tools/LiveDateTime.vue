@@ -19,6 +19,7 @@ export default {
       setTimeout(this.getDate, 1000)
     }
   },
+
   mounted() {
     this.getDate()
   }
