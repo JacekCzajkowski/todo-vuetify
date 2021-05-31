@@ -16,14 +16,14 @@
         text
         color="primary"
       >
-        Cancel
+        Anuluj
       </v-btn>
       <v-btn
         @click="saveTask"
         text
         color="primary"
       >
-        OK
+        Zapisz
       </v-btn>
     </v-date-picker>
   </v-dialog>

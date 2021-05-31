@@ -6,23 +6,23 @@
   >
     <v-card>
       <v-card-title class="headline">
-        Delete task?
+        Usunąć zadanie?
       </v-card-title>
-      <v-card-text>Are you sure you wanna delete this task?</v-card-text>
+      <v-card-text>Czy jesteś pewien że chcesz usunąć zadanie?</v-card-text>
       <v-card-actions>
         <v-spacer></v-spacer>
         <v-btn
           @click="$emit('close')"
           text
         >
-          No
+          Nie
         </v-btn>
         <v-btn
           @click="$store.dispatch('deleteTask', task.id)"
           color="red darken-1"
           text
         >
-          Yes
+          Tak
         </v-btn>
       </v-card-actions>
     </v-card>

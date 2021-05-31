@@ -18,10 +18,10 @@
           >
         </v-avatar>
         <div class="white--text text-subtitle-1 font-weight-bold">
-          Jacek Czajkowski
+          Elo
         </div>
         <div class="white--text text-subtitle-2">
-          ja_cek
+          Menelo
         </div>
       </v-img>
 

@@ -1,9 +1,7 @@
 <template>
   <div class="about pa-6">
-    <h1>About {{ $store.state.appTitle }}</h1>
-    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed feugiat justo id viverra consequat. Integer feugiat lorem faucibus est ornare scelerisque. Donec tempus, nunc vitae semper sagittis, odio magna semper ipsum, et laoreet sapien mauris vitae arcu.</p>
-    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed feugiat justo id viverra consequat. Integer feugiat lorem faucibus est ornare scelerisque. Donec tempus, nunc vitae semper sagittis, odio magna semper ipsum, et laoreet sapien mauris vitae arcu.</p>
-    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed feugiat justo id viverra consequat. Integer feugiat lorem faucibus est ornare scelerisque. Donec tempus, nunc vitae semper sagittis, odio magna semper ipsum, et laoreet sapien mauris vitae arcu.</p>
-    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed feugiat justo id viverra consequat. Integer feugiat lorem faucibus est ornare scelerisque. Donec tempus, nunc vitae semper sagittis, odio magna semper ipsum, et laoreet sapien mauris vitae arcu.</p>
+    <h1>{{ $store.state.appTitle }} info</h1>
+    <p>Ogarnij się to bardzo prosta i darmowa aplikacja do zarządzania zadaniami, która pomoże Ci utrzymać porządek każdego dnia. Ta apka może pomóc nieważne, kim jesteś, ani co robisz!</p>
+    <p>Rozpocznij od razu, szybko i łatwo dodając nowe zadania używając szybkiego dodawania "+"</p>
   </div>
 </template>
